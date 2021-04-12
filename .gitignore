@@ -103,8 +103,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# added by liang
+# ======================== added by liang ========================
 .vscode/
 exp/
 data/GRANMixtureBernoulli_LENS_train_1_1_1_DFS_precompute/
-snapshot_model/
+
+# this folder is downlaoded by running ./download_model.sh
+# and there are several .pth files which are too large to push to git
+snapshot_model/  
