@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# added by liang
+.vscode/
+exp/
+data/GRANMixtureBernoulli_LENS_train_1_1_1_DFS_precompute/
+snapshot_model/
