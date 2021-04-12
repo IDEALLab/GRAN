@@ -77,6 +77,10 @@ def gaussian_emd(x, y, sigma=1.0, distance_scaling=1.0):
 
 
 def gaussian(x, y, sigma=1.0):  
+  ''' XD
+  x, y: np.ndarray 
+  The same for other kernels.
+  '''
   support_size = max(len(x), len(y))
   # convert histogram values x and y to float, and make them equal len
   x = x.astype(np.float)
@@ -142,6 +146,7 @@ def disc(samples1, samples2, kernel, is_parallel=True, *args, **kwargs):
 
 def compute_mmd(samples1, samples2, kernel, is_hist=True, *args, **kwargs):
   ''' MMD between two samples '''
+  ''' XD: samples1, samples2: LIST of histograms (ndarray) => Special case: only one histogram in each list, [hist].'''
   # normalize histograms into pmf  
   if is_hist:
     samples1 = [s1 / np.sum(s1) for s1 in samples1]
